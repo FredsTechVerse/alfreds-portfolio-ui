@@ -1,8 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {},
-	},
-	plugins: [],
-}
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  theme: {
+    fontFamily: {
+      primary: ["Lexend Deca", "sans-serif"],
+    },
+    screens: {
+      phone: "300px",
+      tablet: "568px",
+      laptop: "1024px",
+    },
+    extend: {
+      colors: {
+        primary: "#006adb",
+        secondary: "#F0F7FF",
+        card: "#F1F1F1",
+      },
+      aspectRatio: {
+        "2/3": "2 / 3",
+      },
+    },
+  },
+  plugins: [],
+};

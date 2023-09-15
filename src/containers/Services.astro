@@ -1,3 +1,14 @@
-<article id="services" class="w-full h-screen bg-slate-200">
-    <p>This is the about section</p>
+---
+import ServiceCard from "../components/ServiceCard.astro"
+import SectionTitle from "../components/SectionTitle.astro"
+---
+
+<article id="services" class="w-full  bg-slate-100 py-2 h-[85vh]">
+    <SectionTitle title="Services"/>
+ <section class="grid phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-3 p-4 place-items-center">
+        <ServiceCard/>
+        <ServiceCard/>
+        <ServiceCard/>
+        <ServiceCard/>
+    </section>
 </article>
