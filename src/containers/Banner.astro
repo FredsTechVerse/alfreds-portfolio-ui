@@ -1,14 +1,17 @@
 ---
-import TechTag from "../components/TechTag.astro"
+import { Image } from 'astro:assets';
+import banner from '../assets/banner_1.png'
+import circle from '../assets/circle.svg'
 ---
 <article id="home" class="w-full h-screen flex">
     <figcaption class="relative w-[50%] flex flex-col items-start justify-center py-12 pl-5">
         <h2 class="text-4xl uppercase font-bold ">I'm Alfred Gichia</h2>
         <p class="text-lg py-5 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, culpa alias? Quae itaque quisquam dignissimos deleniti labore veniam repellat asperiores?</p>
         <button class="bg-orange-500 h-12 rounded-lg px-4">View Resume</button>
-     >
+     
         </figcaption>
-    <figure class="h-full bg-slate-300 w-[50%] animate-pulse ">
-       
+    <figure class="h-full w-[50%] relative  flex flex-row items-end justify-center">
+        <Image class="absolute bottom-10 z-10 left-6 aspect-square w-[85%]  " src={banner} alt="Banner Image "/>
+        <Image class="absolute bottom-20 w-[65%] aspeborder-2 border-red-500ct-square" src={circle} alt="Banner Image "/>
     </figure>
 </article>
