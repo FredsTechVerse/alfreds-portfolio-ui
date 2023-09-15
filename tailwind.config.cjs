@@ -12,7 +12,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#006adb",
+        primary: "#313bac",
         secondary: "#F0F7FF",
         card: "#F1F1F1",
       },
