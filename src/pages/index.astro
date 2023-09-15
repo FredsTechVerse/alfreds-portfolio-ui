@@ -1,10 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Banner from '../containers/Banner.astro';
+import Services from '../containers/Services.astro';
+import Work from '../containers/Work.astro';
+import Skills from "../containers/Skills.astro";
+import ContactUs from "../containers/ContactUs.astro";
 ---
 
 <Layout title="alfreds-portfolio">
 	<main>
-		<p class="text-2xl border-2 border-red-500 w-max mx-auto my-2 p-2 rounded-md"> FREDS PORTFOLIO</p>
+		<Banner/>
+		<Services/>
+		<Work/>
+		<Skills/>
+		<ContactUs/>
 	</main>
 </Layout>
 
