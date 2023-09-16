@@ -1,12 +1,12 @@
 ---
 import WorkCard from "../components/WorkCard.astro";
-import SectionTitle from "../components/SectionTitle.astro"
+import SectionHeading from "../components/SectionHeading.astro"
 
 ---
 
-<article id="work" class=" relative w-full min-h-[100vh] py-16  ">
-    <SectionTitle title="Projects"/>
- <section class="grid phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-5 p-4 place-items-center px-14">
+<article id="work" class=" relative w-full min-h-[100vh] py-12  ">
+    <SectionHeading subTitle="work" title="Projects"/>
+ <section class="grid phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-5 p-4 place-items-center px-5 tablet:px-10 laptop:px-15">
         <WorkCard/>
         <WorkCard/>
         <WorkCard/>
@@ -34,7 +34,7 @@ import SectionTitle from "../components/SectionTitle.astro"
     position: relative;
     display: block;
     width: calc(119% + 1.3px);
-    height: 90px;
+    height: 55px;
 }
 
 .custom-shape-divider-bottom-1694798741 .shape-fill {

@@ -1,27 +1,46 @@
 ---
-import SectionTitle from "../components/SectionTitle.astro";
+import SectionHeading from "../components/SectionHeading.astro";
 import Skill from "../components/Skill.astro";
 import Experience from "../components/Experience.astro";
----
-<article id="skills" class="relative w-full  bg-slate-100  flex flex-col items-center justify-start min-h-[100vh] py-16  " >
-    <SectionTitle title="skills & experiences"/>
-    <section class="flex flex-col h-[85%]  laptop:flex-row  items-center justify-center w-[85%] gap-3 ">
 
-        <section class="grid grid-cols-3  w-[50%] h-full ">
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
-            <Skill/>
+// SKILLS
+import git from "../assets/git.png"
+import figma from "../assets/figma.png"
+import astro from "../assets/astro.png"
+import nextJS from "../assets/Nextjs.png"
+import mongodb from "../assets/mongoDB.png"
+import express from "../assets/express.png"
+import react from "../assets/react.png"
+import nodeJS from "../assets/node.png"
+import html from "../assets/html.png"
+import css from "../assets/css.png"
+import sass from "../assets/sass.png"
+import tailwindcss from "../assets/tailwindcss.png"
+import javascript from "../assets/javascript.png"
+import typeScript from "../assets/typescript_logo.png"
+
+---
+<article id="skills" class="relative w-full  bg-slate-100  flex flex-col items-center justify-start pt-12 pb-24 " >
+    <SectionHeading subTitle="skills & experiences" title="Tools of work"/>
+    <section class="flex flex-col laptop:flex-row  items-center justify-center w-full gap-3 tablet:gap-10 laptop:h-[450px]">
+
+        <section class="grid  grid-cols-3 tablet:grid-cols-4 gap-3 p-3 h-full ">
+            <Skill icon={git} name="git"/>
+            <Skill icon={figma} name="figma"/>
+            <Skill icon={astro} name="astro"/>
+            <Skill icon={nextJS} name="nextJS"/>
+            <Skill icon={mongodb} name="mongodb"/>
+            <Skill icon={express} name="express"/>
+            <Skill icon={react} name="react"/>
+            <Skill icon={nodeJS} name="nodeJS"/>
+            <Skill icon={html} name="html"/>
+            <Skill icon={sass} name="sass"/>
+            <Skill icon={css} name="css"/>
+            <Skill icon={tailwindcss} name="tailwindcss"/>
+            <Skill icon={javascript} name="javascript"/>
+            <Skill icon={typeScript} name="typescript"/>
         </section>
-        <section class="experiences w-[50%] rounded-lg flex flex-col px-20 gap-4">
+        <section class="experiences w-full laptop:w-[40%] rounded-lg flex flex-col px-5 tablet:px-10 gap-1">
             <Experience/>
             <Experience/>
             <Experience/>
@@ -51,7 +70,7 @@ import Experience from "../components/Experience.astro";
     position: relative;
     display: block;
     width: calc(119% + 1.3px);
-    height: 90px;
+    height: 55px;
 }
 
 .custom-shape-divider-bottom-1694799701 .shape-fill {

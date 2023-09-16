@@ -1,7 +1,8 @@
 ---
 // COMPONENTS
 import ServiceCard from "../components/ServiceCard.astro"
-import SectionTitle from "../components/SectionTitle.astro"
+import SectionHeading from "../components/SectionHeading.astro"
+
 // IMAGES
 import FrontEnd from "../assets/Front_End Dev.png";
 import MernStack from "../assets/MERN_Dev.png";
@@ -9,9 +10,9 @@ import WebDesign from "../assets/Web Design.jpeg";
 import Backend from "../assets/Backend_Dev.jpg";
 ---
 
-<article id="services" class="relative w-full bg-slate-100 min-h-[100vh] py-16">
-    <SectionTitle title="Services"/>
- <section class="grid phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-5 place-items-center px-14">
+<article id="services" class="relative w-full bg-slate-100 min-h-[100vh] py-12">
+    <SectionHeading subTitle="About" title="Services offered"/>
+ <section class="grid phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-5 place-items-center px-5 tablet:px-10 laptop:px-15">
         <ServiceCard image={FrontEnd} heading="Front End Development" body="I design and develop beautiful and dynamic applications."/>
         <ServiceCard image={Backend} heading="Backend Development" body="I am proficient in developing fast and scalable backend infrastructure"/>
         <ServiceCard image={MernStack} heading="Fullstack Development" body="I develop fully functional applications tailored to suit your needs"/>
@@ -39,7 +40,7 @@ import Backend from "../assets/Backend_Dev.jpg";
     position: relative;
     display: block;
     width: calc(119% + 1.3px);
-    height: 90px;
+    height: 55px;
 }
 
 .custom-shape-divider-bottom-1694798741 .shape-fill {

@@ -1,0 +1,12 @@
+---
+interface Props {
+    title: string;
+    subTitle:string;
+}
+
+const { title,subTitle } = Astro.props;
+---
+<header>
+    <h2 class="uppercase phone:text-xs text-sm  font-bold text-slate-500 text-center my-1">{subTitle}</h2>
+    <h2 class="uppercase phone:text-xl text-4xl font-bold text-center my-1 tablet:my-3">{title}</h2>
+</header>

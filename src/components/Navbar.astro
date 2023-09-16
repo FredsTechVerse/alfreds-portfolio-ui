@@ -1,5 +1,10 @@
+---
+import logo from "../assets/logo.png"
+import {Image} from "astro:assets"
+---
+
 <nav class="sticky w-full top-0 flex justify-between items-center px-3 h-14  bg-transparent  backdrop-blur-md z-30 bg-slate-300 bg-opacity-[22%] rounded-b-2xl  ">
-    <section class="uppercase font-bold">Banner</section>
+    <Image src={logo} alt="Portfolio logo" class="h-full w-40"/>
     <section class="capitalize flex items-center gap-3.5">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
@@ -7,7 +12,7 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </section>
-    <button class="capitalize bg-orange-400 hover:bg-orange-600 text-slate-800 rounded-full h-8 px-5">
+    <button class="capitalize bg-orange-500 hover:bg-orange-600 text-slate-800 rounded-full h-10 px-5">
         Hire Me
     </button>
        
