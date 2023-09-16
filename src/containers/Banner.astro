@@ -1,18 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 import banner from '../assets/banner_1.png'
-import circle from '../assets/circle.svg'
+import circle from '../assets/blob.svg'
 ---
-<article id="home" class=" relative w-full h-screen flex flex-col laptop:flex-row ">
+<article id="home" class=" relative w-full min-h-screen  laptop:h-screen flex flex-col laptop:flex-row">
     <figcaption class="relative w-full laptop:w-[50%] flex flex-col items-start justify-center py-12 pl-5 ">
         <h2 class="text-4xl uppercase font-bold ">I'm Alfred Gichia</h2>
-        <p class="text-lg py-5 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, culpa alias? Quae itaque quisquam dignissimos deleniti labore veniam repellat asperiores?</p>
-        <button class="bg-orange-500 h-12 rounded-lg px-4">View Resume</button>
+        <p class="text-lg py-5 ">A proficient web developer with a keen interest in building stunning, user-centric and lightning-fast web applications using cutting-edge technologies like Astro and Next.js.</p>
+        <button class="bg-orange-500 h-14 rounded-full px-8">View Resume</button>
      
     </figcaption>
-    <figure class="h-full w-full laptop:w-[50%] relative  flex flex-row items-end justify-center">
+    <figure class=" h-[350px] tablet:h-[420px] laptop:h-full w-full laptop:w-[50%] relative  flex flex-row items-end justify-center">
         <Image class="absolute phone:bottom-0 z-10 laptop:left-6 aspect-square w-full tablet:w-[60%] laptop:w-[85%]" src={banner} alt="Banner Image "/>
-        <Image class="absolute phone:bottom-10 tablet:bottom-15  w-full tablet:w-[48%] laptop:w-[85%] aspeborder-2 border-red-500ct-square" src={circle} alt="Banner Image "/>
+        <Image class="absolute phone:bottom-0 h-full bottom-0 w-full" src={circle} alt="Banner Image "/>
     </figure>
 
    <div class="custom-shape-divider-bottom-1694798206">
