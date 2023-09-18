@@ -10,8 +10,8 @@ const {image,heading,body}=Astro.props;
 ---
 <article class="rounded-lg aspect-square w-full h-full flex flex-col items-center justify-start bg-tranparent ">
     <Image src={image} alt="Alternative image"  class="rounded-lg w-full h-[60%]"/>
-<figcaption class=" flex flex-col justify-start items-start p-3 gap-2">
+<figcaption class=" flex flex-col justify-start items-start  gap-2 py-2">
     <h3 class="text-start text-lg font-bold ">{heading}</h3>
-    <p class="font-thin">{body}</p>
+    <p >{body}</p>
 </figcaption>
 </article>
