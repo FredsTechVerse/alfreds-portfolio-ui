@@ -1,7 +1,12 @@
 ---
 import CardIcon from '../components/CardIcon.astro'
 import { Image } from 'astro:assets';
-import FrontEnd from "../assets/Front_End Dev.png";
+import FrontEnd from "../assets/Backend_Dev.jpg";
+import tailwindcss from "../assets/tailwindcss.png"
+import react from "../assets/react.png"
+import express from "../assets/express.png"
+import mongodb from "../assets/mongoDB.png"
+
 
 ---
 
@@ -9,15 +14,17 @@ import FrontEnd from "../assets/Front_End Dev.png";
 <figure class="  rounded-t-lg h-[65%] w-full relative">
     <Image src={FrontEnd} alt="Alternative image"  class="rounded-t-lg w-full h-full"/>
 </figure>
-<figcaption class="relative flex flex-col justify-between items-center pt-2 px-1 gap-2 text-center  ">
-    <h1 class=" uppercase font-bold text-md"> Project Heading</h1>
-    <p class=" text-[14px] font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, voluptate!
+<figcaption class="relative flex flex-col justify-between items-center px-2 gap-3 p-1 text-center   ">
+    <h1 class="absolute mt-[-16px] bg-orange-500 text-slate-700 px-4 py-1 rounded-full  uppercase font-bold text-[12px]"> Project Heading</h1>
+    <p class=" text-[14px] font-thin mt-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, voluptate!
     </p>
-     <section class=" relative  flex items-center justify-start gap-1.5  mb-2 "> 
-        <CardIcon/>
-        <CardIcon/>
-        <CardIcon/>
-        <CardIcon/>
+     <section class=" relative  self-end flex items-center justify-start gap-1.5  mb-2 "> 
+        <CardIcon icon={react}/>
+        <CardIcon icon={tailwindcss}/>
+        <CardIcon icon={express}/>
+        <CardIcon icon={mongodb}/>
+
     </section>
+
 </figcaption>
 </article>

@@ -1,1 +1,8 @@
-    <div class="h-6 w-max rounded-lg text-slate-800 bg-orange-500 font-bold text-[12px] px-1 flex flex-row items-center">#NextJS</div>
+---
+interface Props {
+    icon:any;
+}
+import {Image} from "astro:assets"
+const {icon}=Astro.props
+---
+    <Image src={icon} alt="Alternative image"  class="w-8 aspect-square rounded-full flex flex-col items-center justify-center bg-blue-300/10 p-1 "/>
