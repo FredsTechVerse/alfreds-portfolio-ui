@@ -7,7 +7,7 @@ import {Image} from "astro:assets"
 const {icon,name}=Astro.props
 ---
 
-<section class="w-full h-full aspect-square rounded-2xl  flex flex-col gap-1 items-center justify-center px-4">
-    <Image src={icon} alt="Alternative image"  class="rounded-lg w-16 h-16"/>
+<section class="w-full h-full rounded-2xl  flex flex-col gap-1 items-center justify-center px-4">
+    <Image src={icon} alt="Alternative image"  class="rounded-lg w-14 h-14"/>
     <figcaption class=" text-center text-md capitalize w-full">{name}</p>
 </section>
