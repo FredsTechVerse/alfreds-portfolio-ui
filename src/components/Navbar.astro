@@ -3,17 +3,48 @@ import logo from "../assets/logo.png"
 import {Image} from "astro:assets"
 ---
 
-<nav class="sticky w-full top-0 flex justify-between items-center px-3 h-14  bg-transparent  backdrop-blur-md z-30 bg-slate-300 bg-opacity-[22%] rounded-b-2xl  ">
-    <Image src={logo} alt="Portfolio logo" class="h-full w-40"/>
-    <section class="capitalize flex items-center gap-3.5">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+    <section class="fixed top-0 left-3 h-14 w-40 ">
+        <Image src={logo} alt="Portfolio logo" class="h-full w-full"/>
     </section>
-    <button class="capitalize bg-orange-500 hover:bg-orange-600 text-slate-800 rounded-full h-10 px-5">
-        Hire Me
-    </button>
-       
-</nav>
+    <button id="menu" class="fixed top-0 right-3 h-10 w-max capitalize text-slate-800 rounded-lg px-5 laptop:hidden z-40">
+       Menu
+   </button>
+    <section class=" fixed top-14 tablet:right-3 laptop:top-0 w-[80%] tablet:w-[40%] laptop:w-max  capitalize h-max laptop:px-1 z-40 ">
+        <section id="navbar" class=" phone:hidden flex-col  laptop:flex laptop:flex-row items-center phone:justify-start laptop:justify-center w-full laptop:w-max gap-3.5 backdrop-blur-lg rounded-lg bg-slate-300/20">
+            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full h-11 text-center laptop:px-3 rounded-lg" href="#home" class=" text-orange-700 hover:text-black">Home</a>
+            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full h-11 text-center laptop:px-3 rounded-lg" href="#services">Services</a>
+            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full h-11 text-center laptop:px-3 rounded-lg" href="#work">Work</a>
+            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full h-11 text-center laptop:px-3 rounded-lg" href="#skills">Skills</a>
+            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full h-11 text-center laptop:px-3 rounded-lg" href="#contact">Contact</a>
+        </section>
+    </section>
+
+<script>
+    let btnStatus = false
+    const menuBtn = document.getElementById("menu");
+    const navbar = document.getElementById("navbar");
+    const navLink = document.getElementById("nav-link");
+
+    navLink?.addEventListener("click",()=>{
+        console.log("Nav link has been clicked");
+        navbar?.classList.remove("flex")
+        navbar?.classList.add("phone:hidden")
+    })
+
+    menuBtn?.addEventListener("click",()=>{
+        btnStatus = !btnStatus
+        menuBtn.innerText="Close"
+        if(btnStatus){
+        console.log("Menu button has been clicked.")
+        navbar?.classList.remove("phone:hidden")
+        navbar?.classList.add("flex")
+        }else{
+        menuBtn.innerText="Menu"
+        console.log("Btn has been unclicked!")
+        navbar?.classList.remove("flex")
+        navbar?.classList.add("phone:hidden")
+        }
+    })
+
+
+</script>
