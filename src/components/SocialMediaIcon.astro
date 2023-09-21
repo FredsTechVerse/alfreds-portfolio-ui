@@ -1,0 +1,10 @@
+---
+interface Props {
+    icon:any;
+}
+import {Image} from "astro:assets"
+const {icon}=Astro.props
+---
+    <Image src={icon} alt="Alternative image"  class="w-10 tablet:w-12 laptop:w-14 aspect-square rounded-full flex flex-col items-center justify-center bg-slate-300 p-2.5 my-1 z-50 "/>
+
+

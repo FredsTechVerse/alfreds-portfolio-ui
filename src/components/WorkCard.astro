@@ -10,21 +10,19 @@ import mongodb from "../assets/mongoDB.png"
 
 ---
 
-<article class="rounded-lg  aspect-square w-full flex flex-col items-center justify-start h-full shadow-xl bg-white shadow-slate-500/20 ">
-<figure class="  rounded-t-lg h-[65%] w-full relative">
-    <Image src={FrontEnd} alt="Alternative image"  class="rounded-t-lg w-full h-full"/>
-</figure>
-<figcaption class="relative flex flex-col justify-between items-center px-2 gap-3 p-1 text-center   ">
-    <h1 class="absolute mt-[-16px] bg-orange-500 text-slate-50 px-4 py-0.5 rounded-full  font-extrabold capitalize  text-[14px]"> Project Heading</h1>
-    <p class=" text-[14px] font-thin mt-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, voluptate!
-    </p>
-     <section class=" relative  self-end flex items-center justify-start gap-1.5  mb-2 "> 
+<article class="rounded-2xl  aspect-square w-full flex flex-col items-center justify-start h-full shadow-xl bg-white shadow-slate-500/20 ">
+<figure class="  rounded-l w-full relative group">
+    <Image src={FrontEnd} alt="Alternative image"  class="rounded-t-2xl w-full h-60"/>
+       <section class=" absolute top-2 right-2  self-end group-hover:flex flex-col items-center justify-start gap-0.5  mb-2 "> 
         <CardIcon icon={react}/>
         <CardIcon icon={tailwindcss}/>
         <CardIcon icon={express}/>
         <CardIcon icon={mongodb}/>
-
     </section>
-
+</figure>
+<figcaption class="relative flex flex-col justify-between items-center px-2 gap-3 p-1 text-center h-28   ">
+    <h1 class="absolute mt-[-16px] bg-orange-500 text-slate-50 px-4 py-0.5 rounded-full  font-extrabold capitalize  text-[14px]"> Project Heading</h1>
+    <p class=" text-[15px] font-thin mt-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, voluptate!
+    </p>
 </figcaption>
 </article>

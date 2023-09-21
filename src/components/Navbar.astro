@@ -2,22 +2,22 @@
 import logo from "../assets/logo.png"
 import {Image} from "astro:assets"
 ---
-
-    <section class="fixed top-0 left-3 h-14 w-40 ">
+  <section class="fixed top-1 left-3 h-14 w-40 z-40">
         <Image src={logo} alt="Portfolio logo" class="h-full w-full"/>
     </section>
-    <button id="menu" class="fixed top-0 right-3 h-10 w-max capitalize text-slate-800 rounded-lg px-5 laptop:hidden z-40">
+    <button id="menu" class="fixed top-1 right-3 h-10  capitalize  laptop:hidden w-24 z-40 rounded-md bg-orange-500 text-white">
        Menu
    </button>
-    <section class=" fixed top-14 tablet:right-3 laptop:top-0 laptop:right-0 w-[80%] tablet:w-[40%] laptop:w-max  capitalize h-max laptop:px-1 z-40 ">
+    <section class="bg-orange-500 bg-opacity-[10%] backdrop-blur-lg  rounded-lg fixed top-14 right-2 tablet:right-3 laptop:top-1 laptop:right-1 w-[80%] tablet:w-[40%] laptop:w-max  capitalize h-max z-40 ">
         <section id="navbar" class=" phone:hidden flex-col  laptop:flex laptop:flex-row items-center phone:justify-start laptop:justify-center w-full laptop:w-max gap-3.5 backdrop-blur-lg rounded-lg bg-slate-300/20">
-            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full laptop:w-24 h-12 text-center laptop:px-3 rounded-md" href="#home" class=" text-orange-700 hover:text-black">Home</a>
-            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full laptop:w-24 h-12 text-center laptop:px-3 rounded-md" href="#services">Services</a>
-            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full laptop:w-24 h-12 text-center laptop:px-3 rounded-md" href="#work">Work</a>
-            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full laptop:w-24 h-12 text-center laptop:px-3 rounded-md" href="#skills">Skills</a>
-            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full laptop:w-24 h-12 text-center laptop:px-3 rounded-md" href="#contact">Contact</a>
+            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full laptop:w-24 h-12 text-center laptop:px-3 rounded-sm" href="#home" class=" text-orange-700 hover:text-black">Home</a>
+            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full laptop:w-24 h-12 text-center laptop:px-3 rounded-sm" href="#services">Services</a>
+            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full laptop:w-24 h-12 text-center laptop:px-3 rounded-sm" href="#work">Work</a>
+            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full laptop:w-24 h-12 text-center laptop:px-3 rounded-sm" href="#skills">Skills</a>
+            <a  id="nav-link" class="flex flex-row items-center justify-center hover:text-white hover:bg-orange-500 w-full laptop:w-24 h-12 text-center laptop:px-3 rounded-sm" href="#contact">Contact</a>
         </section>
     </section>
+  
 
 <script>
     let btnStatus = false
