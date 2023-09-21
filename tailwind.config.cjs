@@ -8,7 +8,7 @@ module.exports = {
     screens: {
       phone: "300px",
       tablet: "568px",
-      laptop: "1024px",
+      laptop: "1025px",
       "2xl": "1400px",
     },
     extend: {

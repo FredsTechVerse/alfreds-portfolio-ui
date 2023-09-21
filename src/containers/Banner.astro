@@ -3,15 +3,15 @@ import { Image } from 'astro:assets';
 import banner from '../assets/banner_1.png'
 import blob from '../assets/blob.svg'
 ---
-<article id="home" class=" relative w-full min-h-screen  tablet:h-[75vh] flex flex-col items-center justify-center laptop:flex-row pt-12 laptop:py-0">
+<article id="home" class=" relative w-full  laptop:h-[80vh] flex flex-col items-center justify-start laptop:justify-center laptop:flex-row pt-12 laptop:py-0">
     <figcaption class="relative w-full laptop:w-[50%] flex flex-col phone:items-center tablet:items-start justify-center py-12 pl-5 ">
         <h2 class="text-4xl uppercase font-bold ">I'm <span class="text-orange-500">Alfred Gichia </span></h2> 
         <p class="text-lg py-5 ">A proficient <span class="text-orange-600">web developer</span> with a keen interest in building stunning, user-centric and lightning-fast web applications using cutting-edge technologies like Astro and Next.js.</p>
         <button class="bg-orange-500 h-12 rounded-lg px-4  text-white">View Resume</button>
     </figcaption>
-    <figure class=" h-[350px] tablet:h-[420px] laptop:h-full w-full laptop:w-[50%] relative  flex flex-row items-end justify-center">
-        <Image class="absolute phone:bottom-0 z-10 laptop:left-6 aspect-square w-full tablet:w-[60%] laptop:w-[85%]" src={banner} alt="Banner Image "/>
-        <Image class="absolute phone:bottom-0 h-[95%] laptop:h-[78%] bottom-0 w-full" src={blob} alt="Banner Image "/>
+    <figure class=" h-[400px] tablet:min-h-[600px] tablet:h-max  laptop:h-full w-full laptop:w-[50%] relative  flex flex-row items-end justify-center ">
+        <Image class="absolute phone:bottom-0  laptop:left-6 aspect-square w-full tablet:w-[70%] laptop:w-[90%]" src={banner} alt="Banner Image "/>
+        <Image class="absolute phone:bottom-0 h-[95%] tablet:h-full laptop:h-[90%] bottom-0 w-full z-[-2]" src={blob} alt="Banner Image "/>
     </figure>
 
    <div class="custom-shape-divider-bottom-1694798206">
