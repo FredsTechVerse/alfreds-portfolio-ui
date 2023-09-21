@@ -7,3 +7,4 @@
 - Add my social media handles.
 - A GIF is better than slider of images - control over what client see in a whisk.
 - A video overlay of project should come up on gif click.... Animations not necessary.
+- There is something making my screen overflow on small screens.
