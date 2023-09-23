@@ -1,10 +1,10 @@
 # REMAINING
 
-- Confirm backdrop blur to navbar.
-- Add social media tabs and respective icons even to close/open nav.
-- Add astro animations to lighten the spirit.
+- Add framer motion animations
+- Add full backdrop blur to navbar components
+- Update Socials
+- Tweak cards
 - Prepare gifs for the projects.
-- Add my social media handles.
-- A GIF is better than slider of images - control over what client see in a whisk.
-- A video overlay of project should come up on gif click.... Animations not necessary.
-- There is something making my screen overflow on small screens.
+- A video section of project should come up on gif click.... Animations necessary using view transition for routing animations.
+- Add animations to the banner especially the baloon .... Skills grid is experiencing some hitches
+- I was able to do the animations without framer motion. Cool mehn

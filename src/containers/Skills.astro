@@ -20,12 +20,12 @@ import javascript from "../assets/javascript.png"
 import typeScript from "../assets/typescript_logo.png"
 
 ---
-<article id="skills" class="relative w-full  bg-slate-100  flex flex-col items-center justify-start pt-16 pb-24 " >
+<article id="skills" class=" relative w-full  bg-slate-100  flex flex-col items-center justify-start pt-16 pb-24 " >
     <SectionHeading subTitle="skills & experiences" title="Tools of work"/>
     <section class="flex flex-col laptop:flex-row  items-center justify-center laptop:justify-between laptop:px-10 w-full gap-3 tablet:gap-10  laptop:h-[450px]">
 
 
-        <section class="grid  grid-cols-3 tablet:grid-cols-4 gap-3 p-3 h-full ">
+        <section class="section_hidden grid skill grid-cols-3 tablet:grid-cols-4 gap-3 p-3 h-full ">
             <Skill icon={git} name="git"/>
             <Skill icon={figma} name="figma"/>
             <Skill icon={astro} name="astro"/>
@@ -41,7 +41,7 @@ import typeScript from "../assets/typescript_logo.png"
             <Skill icon={javascript} name="javascript"/>
             <Skill icon={typeScript} name="typescript"/>
         </section>
-        <section class="experiences rounded-lg flex flex-col px-5 py-3 tablet:px-10 gap-1 h-full">
+        <section class="section_hidden skill experiences rounded-lg flex flex-col px-5 py-3 tablet:px-10 gap-1 h-full">
             <Experience/>
         </section>
     </section>

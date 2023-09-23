@@ -18,5 +18,92 @@ import SocialMedia from "../containers/SocialMedia.astro"
 		<ContactUs/>
 		<SocialMedia/>
 	</main>
+
+		<style is:global>
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width:6px;
+  }
+
+  *::-webkit-scrollbar-track {
+ 	background-color: transparent; 
+}
+
+  *::-webkit-scrollbar-thumb {
+	 
+	background-color: rgba(249,115,22,0.7);
+	border-style:none;
+ 	border-radius: 9999px;
+  }
+
+  .section_hidden {
+	opacity:0;
+	/* border:1px solid red; */
+	filter:blur(10px);
+	transform:translateX(-100%);
+	transition:all 1.2s ease-in-out;
+  }
+  .section_show {
+	opacity:1;
+	filter:blur(0);
+	transform:translateX(0)
+  }
+
+  .service:nth-child(2){
+	transition-delay:200ms
+  }
+   .service:nth-child(3){
+	transition-delay:400ms
+  }
+  
+``.service:nth-child(4){
+	transition-delay:600ms
+  }
+
+  .work:nth-child(2){
+	transition-delay:200ms
+  }
+   .work:nth-child(3){
+	transition-delay:400ms
+  }
+  
+ .work:nth-child(4){
+	transition-delay:600ms
+  }
+
+.skill:nth-child(2){
+	transition-delay:500ms
+  }
+
+  
+  @media(prefers-reduced-motion){
+	.section_hidden {
+		transition:none;
+	}
+  }
+	</style>
+
+	<script  >
+		const observer = new IntersectionObserver((entries)=>{
+			entries.forEach((entry)=>{
+				console.log(entry)
+				if(entry.isIntersecting){
+					entry.target.classList.add("section_show")
+				}else{
+					entry.target.classList.remove("section_show")
+				}
+			})
+		})
+
+		const hiddenElements = document.querySelectorAll(".section_hidden")
+		console.log({hiddenElements:hiddenElements.length})
+		hiddenElements.forEach((el)=>observer.observe(el))
+	</script>
 </Layout>
 
