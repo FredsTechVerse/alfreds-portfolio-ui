@@ -42,13 +42,32 @@ import SocialMedia from "../containers/SocialMedia.astro"
  	border-radius: 9999px;
   }
 
+  .blob{
+	scale:0;
+	transition:all 1.5s ease-in-out;
+  }
+
+  .blob_enlarged{
+	scale:1
+  }
+
+.card{
+	scale:1;
+	transition:all 200ms ease-in-out ;
+}
+  .card:hover {
+	scale:1.1;
+  }
+
   .section_hidden {
 	opacity:0;
 	/* border:1px solid red; */
-	filter:blur(10px);
+	filter:blur(4px);
 	transform:translateX(-100%);
 	transition:all 1.2s ease-in-out;
   }
+
+
   .section_show {
 	opacity:1;
 	filter:blur(0);
@@ -89,8 +108,8 @@ import SocialMedia from "../containers/SocialMedia.astro"
   }
 	</style>
 
-	<script  >
-		const observer = new IntersectionObserver((entries)=>{
+	<script >
+		const sectionObserver = new IntersectionObserver((entries)=>{
 			entries.forEach((entry)=>{
 				console.log(entry)
 				if(entry.isIntersecting){
@@ -101,9 +120,23 @@ import SocialMedia from "../containers/SocialMedia.astro"
 			})
 		})
 
+		const blobObserver = new IntersectionObserver((entries)=>{
+			entries.forEach((entry)=>{
+				console.log(entry)
+				if(entry.isIntersecting){
+					entry.target.classList.add("blob_enlarged")
+				}else{
+					entry.target.classList.remove("blob_enlarged")
+				}
+			})
+		})
+
+
 		const hiddenElements = document.querySelectorAll(".section_hidden")
-		console.log({hiddenElements:hiddenElements.length})
-		hiddenElements.forEach((el)=>observer.observe(el))
+		const blob = document.querySelectorAll(".blob")
+
+		hiddenElements.forEach((el)=>sectionObserver.observe(el))
+		blob.forEach((el)=>blobObserver.observe(el))
 	</script>
 </Layout>
 
