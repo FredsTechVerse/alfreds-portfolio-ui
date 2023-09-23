@@ -19,7 +19,7 @@ import SocialMedia from "../containers/SocialMedia.astro"
 		<SocialMedia/>
 	</main>
 
-		<style is:global>
+	<style is:global>
   /* Firefox */
   * {
     scrollbar-width: thin;
@@ -42,6 +42,24 @@ import SocialMedia from "../containers/SocialMedia.astro"
  	border-radius: 9999px;
   }
 
+
+  /* SECTIONS */
+
+  .section_hidden {
+	opacity:0;
+	filter:blur(4px);
+	transform:translateX(-100%);
+	transition:all 1.2s ease-in-out;
+  }
+
+  .section_show {
+	opacity:1;
+	filter:blur(0);
+	transform:translateX(0)
+  }
+
+  /* BANNER SECTION */
+
   .blob{
 	scale:0;
 	transition:all 1.2s ease-in-out;
@@ -51,50 +69,43 @@ import SocialMedia from "../containers/SocialMedia.astro"
 	scale:1
   }
 
+  /* CARDS */
+
 .card{
 	scale:1;
 	transition:all 200ms ease-in-out ;
 }
-  .card:hover {
+.card:hover {
 	scale:1.1;
-  }
+}
 
-  .section_hidden {
-	opacity:0;
-	/* border:1px solid red; */
-	filter:blur(4px);
-	transform:translateX(-100%);
-	transition:all 1.2s ease-in-out;
-  }
-
-
-  .section_show {
-	opacity:1;
-	filter:blur(0);
-	transform:translateX(0)
-  }
+  /* SERVICE CARD */
 
   .service:nth-child(2){
-	transition-delay:200ms
+	transition-delay:250ms
   }
    .service:nth-child(3){
-	transition-delay:400ms
+	transition-delay:500ms
   }
   
-``.service:nth-child(4){
-	transition-delay:600ms
+  .service:nth-child(4){
+	transition-delay:750ms
   }
 
+  /* WORK CARD */
+
   .work:nth-child(2){
-	transition-delay:200ms
+	transition-delay:250ms
   }
    .work:nth-child(3){
-	transition-delay:400ms
+	transition-delay:500ms
   }
   
  .work:nth-child(4){
-	transition-delay:600ms
+	transition-delay:750ms
   }
+
+  /* SKILL SECTION */
 
 .skill:nth-child(2){
 	transition-delay:500ms
