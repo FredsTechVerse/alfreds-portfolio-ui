@@ -1,16 +1,17 @@
 ---
 import WorkCard from "../components/WorkCard.astro";
 import SectionHeading from "../components/SectionHeading.astro"
-
+import ChurchApp from "../assets/Church_App.png"
+import ElimuHub from "../assets/Elimu_Mkononi.png"
+import FrancisPortfolio from "../assets/Francis_Portfolio.png"
 ---
 
 <article id="work" class=" relative w-full py-16  ">
     <SectionHeading subTitle="work" title="featured projects"/>
  <section class="grid phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-5 p-4 place-items-center px-5 tablet:px-10 laptop:px-15">
-        <WorkCard/>
-        <WorkCard/>
-        <WorkCard/>
-        <WorkCard/>
+        <WorkCard link="https://elimu-mkononi.netlify.app/" image ={ElimuHub} name="Elimu Hub" description="An e-learning platform"/>
+        <WorkCard link="https://aipca-app.netlify.app/" image={ChurchApp} name="AIPCA Nyahururu" description="Church Application"/>
+        <WorkCard link="https://francisgitau.vercel.app/" image={FrancisPortfolio} name="Portfolio" description="A portfolio website"/>
     </section>
  <div class="custom-shape-divider-bottom-1694798741">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

@@ -1,1 +1,7 @@
-    <div class="h-12  aspect-square rounded-full bg-slate-300 animate-pulse"></div>
+---
+interface Props {
+    text:string;
+}
+const {text}=Astro.props
+---
+    <p  class="px-2 rounded-lg flex items-center text-xs justify-center bg-blue-200 text-blue-600 my-1 ">#{text}</p>
