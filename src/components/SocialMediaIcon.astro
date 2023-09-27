@@ -1,10 +1,13 @@
 ---
 interface Props {
     icon:any;
+    link:string
 }
 import {Image} from "astro:assets"
-const {icon}=Astro.props
+const {icon,link}=Astro.props
 ---
-    <Image src={icon} alt="Alternative image"  class="w-10 tablet:w-12 laptop:w-14 aspect-square rounded-full flex flex-col items-center justify-center bg-slate-300 p-2.5 my-1 z-50 "/>
+<a href={link}>
+    <Image src={icon} alt="Alternative image"  class="w-10 tablet:w-12 laptop:w-14 aspect-square  flex flex-col items-center justify-center bg-slate-300/50 p-2.5 my-1 z-50 rounded-tr-lg rounded-bl-lg  backdrop-blur-sm "/>
+</a>
 
 

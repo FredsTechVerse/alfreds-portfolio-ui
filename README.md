@@ -1,6 +1,3 @@
 # REMAINING
 
-- Updating socials
-- Preparing projects
-- Attaching resume
-- Improving color contrast ratio.
+- Preparing project photos and links.
