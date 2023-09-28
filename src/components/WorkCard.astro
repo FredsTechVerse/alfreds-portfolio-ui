@@ -11,18 +11,19 @@ interface Props {
 const {image,name,description,link}=Astro.props;
 ---
 
-<a href={link} class="card work section_hidden rounded-2xl  aspect-square w-full flex flex-col items-center justify-start h-full shadow-xl bg-white shadow-slate-500/20 cursor-pointer ">
-<figure class="  rounded-l w-full h-[60%] relative group">
+<section  class="work section_hidden  rounded-2xl  aspect-square w-full flex flex-col items-center justify-start h-full shadow-xl bg-white shadow-slate-500/40 cursor-pointer ">
+    <a href={link} class="absolute top-0 right-0 z-10 bg-orange-600 hover:bg-blue-900 rounded-tr-2xl  rounded-bl-2xl text-white text-md px-2 w-20 flex items-center justify-center ">View</a>
+<figure class="  rounded-l w-full h-[60%] relative group ">
     <Image src={image} alt="Alternative image"  class="rounded-t-2xl h-full aspect-video"/> 
 </figure>
-<figcaption class="relative flex flex-col justify-between items-center px-2 gap-3 pt-1 text-center h-[40%] w-full pb-1 ">
+<figcaption class="relative flex flex-col justify-between items-center px-2  pt-1 text-center h-[40%] w-full pb-1 ">
     <h1 class="absolute mt-[-16px] bg-orange-600 text-slate-50 px-4 py-0.5 rounded-full  font-extrabold capitalize  text-[14px]">{name}</h1>
-    <p class=" text-[15px] font-thin mt-7">{description}
+    <p class=" text-[15px] font-thin mt-5 text-center w-full">{description}
     </p>
-    <section class="self-end flex items-center justify-center gap-1 "> 
+    <section class=" flex items-center justify-center gap-1 "> 
         <TechTag text="react"/>
         <TechTag text="tailwind"/>
         <TechTag text="mongodb"/>
     </section>
 </figcaption>
-</a>
+</section>
