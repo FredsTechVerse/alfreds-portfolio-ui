@@ -7,16 +7,19 @@ interface Props {
     image:any,
     name:string,
     description:string,
+    status:string,
 }
-const {image,name,description,link}=Astro.props;
+const {image,name,description,link,status}=Astro.props;
 ---
 
-<section  class="work section_hidden  rounded-2xl  aspect-square w-full flex flex-col items-center justify-start h-full shadow-xl bg-white shadow-slate-500/40 cursor-pointer ">
-    <a href={link} class="absolute top-0 right-0 z-10 bg-orange-600 hover:bg-blue-900 rounded-tr-2xl  rounded-bl-2xl text-white text-md px-2 w-20 flex items-center justify-center ">View</a>
-<figure class="  rounded-l w-full h-[60%] relative group ">
-    <Image src={image} alt="Alternative image"  class="rounded-t-2xl h-full aspect-video"/> 
+<section  class="work section_hidden  rounded-lg  aspect-square w-full flex flex-col items-center justify-start h-full shadow-xl bg-transparent shadow-slate-500/40 cursor-pointer pb-1  ">
+    <span  class="capitalize absolute top-1 right-1 z-10 bg-blue-600/70 backdrop-blur-lg rounded-full text-white text-xs h-5 px-3 flex items-center justify-center ">{status}</span>
+<figure class="rounded-l w-full h-[60%] relative group ">
+    <a href={link}>
+        <Image src={image} alt="Alternative image"  class="rounded-t-lg h-full aspect-video"/> 
+    </a>
 </figure>
-<figcaption class="relative flex flex-col justify-between items-center px-2  pt-1 text-center h-[40%] w-full pb-1 ">
+<figcaption class="relative flex flex-col justify-between items-center px-2  pt-1 text-center h-[40%] w-full  bg-transparent ">
     <h1 class="absolute mt-[-16px] bg-orange-600 text-slate-50 px-4 py-0.5 rounded-full  font-extrabold capitalize  text-[14px]">{name}</h1>
     <p class=" text-[15px] font-thin mt-5 text-center w-full">{description}
     </p>
