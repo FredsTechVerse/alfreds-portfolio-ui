@@ -25,7 +25,6 @@ import {Image} from "astro:assets"
     const navLink = document.getElementById("nav-link");
 
     navLink?.addEventListener("click",()=>{
-        console.log("Nav link has been clicked");
         navbar?.classList.remove("flex")
         navbar?.classList.add("phone:hidden")
     })
@@ -34,12 +33,10 @@ import {Image} from "astro:assets"
         btnStatus = !btnStatus
         menuBtn.innerText="Close"
         if(btnStatus){
-        console.log("Menu button has been clicked.")
         navbar?.classList.remove("phone:hidden")
         navbar?.classList.add("flex")
         }else{
         menuBtn.innerText="Menu"
-        console.log("Btn has been unclicked!")
         navbar?.classList.remove("flex")
         navbar?.classList.add("phone:hidden")
         }

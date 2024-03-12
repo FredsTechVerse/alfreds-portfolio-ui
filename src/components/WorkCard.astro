@@ -1,32 +1,68 @@
 ---
-import TechTag from '../components/TechTag.astro'
-import { Image } from 'astro:assets';
+import TechTag from "../components/TechTag.astro";
+import { Image } from "astro:assets";
 
 interface Props {
-    link:string;
-    image:any,
-    name:string,
-    description:string,
-    status:string,
+  link: string;
+  image: any;
+  name: string;
+  description: string;
+  status: string;
+  demo?: string;
+  tags: string[];
 }
-const {image,name,description,link,status}=Astro.props;
+const { image, name, description, link, status, tags } = Astro.props;
 ---
 
-<section  class="work section_hidden  rounded-lg  aspect-square w-full flex flex-col items-center justify-start h-full shadow-xl bg-transparent shadow-slate-500/40 cursor-pointer pb-1  ">
-    <span  class="capitalize absolute top-1 right-1 z-10 bg-blue-600/70 backdrop-blur-lg rounded-full text-white text-xs h-5 px-3 flex items-center justify-center ">{status}</span>
-<figure class="rounded-l w-full h-[60%] relative group ">
+<section
+  class="work section_hidden rounded-lg aspect-square w-full flex flex-col items-center justify-start shadow-xl bg-transparent shadow-slate-500/40 cursor-pointer pb-1"
+>
+  {
+    Astro.props?.demo && (
+      <a
+        href={Astro.props.demo}
+        class="absolute top-1 left-1 z-10 capitalize bg-slate-500/90 hover:bg-slate-600 backdrop-blur-lg rounded-full text-white text-xs h-5 px-3 flex items-center justify-center"
+      >
+        Demo
+      </a>
+    )
+  }
+
+  <span
+    class="absolute top-1 right-1 z-10 capitalize bg-blue-600/80 backdrop-blur-lg rounded-full text-white text-xs h-5 px-3 flex items-center justify-center"
+    >{status}</span
+  >
+
+  <figure class="rounded-l w-full h-48 relative group">
     <a href={link}>
-        <Image src={image} alt="Alternative image"  class="rounded-t-lg h-full aspect-video"/> 
+      <Image
+        src={image}
+        alt="Alternative image"
+        class="rounded-t-lg h-full aspect-video"
+      />
     </a>
-</figure>
-<figcaption class="relative flex flex-col justify-between items-center px-2  pt-1 text-center h-[40%] w-full  bg-transparent ">
-    <h1 class="absolute mt-[-16px] bg-orange-600 text-slate-50 px-4 py-0.5 rounded-full  font-extrabold capitalize  text-[14px]">{name}</h1>
-    <p class=" text-[15px] font-thin mt-5 text-center w-full">{description}
+  </figure>
+  <figcaption
+    class="relative flex flex-col justify-between items-center px-2 pt-1 text-center h-32 w-full bg-transparent"
+  >
+    <h1
+      class="absolute mt-[-16px] bg-orange-600 text-slate-50 px-4 py-0.5 rounded-full font-extrabold capitalize text-[14px]"
+    >
+      {name}
+    </h1>
+    <p class="text-[15px] font-thin mt-5 text-center w-full overflow-auto">
+      {description}
     </p>
-    <section class=" flex items-center justify-center gap-1 "> 
-        <TechTag text="react"/>
-        <TechTag text="tailwind"/>
-        <TechTag text="mongodb"/>
-    </section>
-</figcaption>
+    {
+      tags.length > 0 && (
+        <section class="flex items-center justify-center gap-1">
+          {tags.map((tag) => (
+            <TechTag text={`${tag}`} />
+          ))}
+        </section>
+      )
+    }
+    <!-- <TechTag text="tailwind" />
+    <TechTag text="mongodb" /> -->
+  </figcaption>
 </section>

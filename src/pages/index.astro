@@ -1,152 +1,144 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Banner from '../containers/Banner.astro';
-import Services from '../containers/Services.astro';
-import Work from '../containers/Work.astro';
+import Layout from "../layouts/Layout.astro";
+import Banner from "../containers/Banner.astro";
+import Services from "../containers/Services.astro";
+import Work from "../containers/Work.astro";
 import Skills from "../containers/Skills.astro";
 import ContactUs from "../containers/ContactUs.astro";
-import SocialMedia from "../containers/SocialMedia.astro"
-
+import SocialMedia from "../containers/SocialMedia.astro";
 ---
 
 <Layout title="alfreds-portfolio">
-	<main class="w-full flex flex-col overflow-x-hidden">
-		<Banner/>
-		<Services/>
-		<Work/>
-		<Skills/>
-		<ContactUs/>
-		<SocialMedia/>
-	</main>
+  <main class="w-full flex flex-col overflow-x-hidden">
+    <Banner />
+    <Services />
+    <Work />
+    <Skills />
+    <ContactUs />
+    <SocialMedia />
+  </main>
 
-	<style is:global>
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--secondary) var(--primary);
-  }
+  <style is:global>
+    /* Firefox */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--secondary) var(--primary);
+    }
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width:6px;
-  }
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+      width: 6px;
+    }
 
-  *::-webkit-scrollbar-track {
- 	background-color: transparent; 
-}
+    *::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
 
-  *::-webkit-scrollbar-thumb {
-	 
-	background-color: rgba(249,115,22,0.7);
-	border-style:none;
- 	border-radius: 9999px;
-  }
+    *::-webkit-scrollbar-thumb {
+      background-color: rgba(249, 115, 22, 0.7);
+      border-style: none;
+      border-radius: 9999px;
+    }
 
+    /* SECTIONS */
 
-  /* SECTIONS */
+    .section_hidden {
+      opacity: 0;
+      filter: blur(4px);
+      transform: translateX(-100%);
+      transition: all 1.2s ease-in-out;
+    }
 
-  .section_hidden {
-	opacity:0;
-	filter:blur(4px);
-	transform:translateX(-100%);
-	transition:all 1.2s ease-in-out;
-  }
+    .section_show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
 
-  .section_show {
-	opacity:1;
-	filter:blur(0);
-	transform:translateX(0)
-  }
+    /* BANNER SECTION */
 
-  /* BANNER SECTION */
+    .blob {
+      scale: 0;
+      transition: all 1.2s ease-in-out;
+    }
 
-  .blob{
-	scale:0;
-	transition:all 1.2s ease-in-out;
-  }
+    .blob_enlarged {
+      scale: 1;
+    }
 
-  .blob_enlarged{
-	scale:1
-  }
+    /* CARDS */
 
-  /* CARDS */
+    .card {
+      scale: 1;
+    }
+    .card:hover {
+      scale: 105%;
+    }
 
-.card{
-	scale:1;
-}
-.card:hover {
-	scale:105%;
-}
+    /* SERVICE CARD */
 
-  /* SERVICE CARD */
+    .service:nth-child(2) {
+      transition-delay: 250ms;
+    }
+    .service:nth-child(3) {
+      transition-delay: 500ms;
+    }
 
-  .service:nth-child(2){
-	transition-delay:250ms
-  }
-   .service:nth-child(3){
-	transition-delay:500ms
-  }
-  
-  .service:nth-child(4){
-	transition-delay:750ms
-  }
+    .service:nth-child(4) {
+      transition-delay: 750ms;
+    }
 
-  /* WORK CARD */
+    /* WORK CARD */
 
-  .work:nth-child(2){
-	transition-delay:250ms
-  }
-   .work:nth-child(3){
-	transition-delay:500ms
-  }
-  
- .work:nth-child(4){
-	transition-delay:750ms
-  }
+    .work:nth-child(2) {
+      transition-delay: 250ms;
+    }
+    .work:nth-child(3) {
+      transition-delay: 500ms;
+    }
 
-  /* SKILL SECTION */
+    .work:nth-child(4) {
+      transition-delay: 750ms;
+    }
 
-.skill:nth-child(2){
-	transition-delay:500ms
-  }
+    /* SKILL SECTION */
 
-  
-  @media(prefers-reduced-motion){
-	.section_hidden {
-		transition:none;
-	}
-  }
-	</style>
+    .skill:nth-child(2) {
+      transition-delay: 500ms;
+    }
 
-	<script >
-		const sectionObserver = new IntersectionObserver((entries)=>{
-			entries.forEach((entry)=>{
-				console.log(entry)
-				if(entry.isIntersecting){
-					entry.target.classList.add("section_show")
-				}else{
-					entry.target.classList.remove("section_show")
-				}
-			})
-		})
+    @media (prefers-reduced-motion) {
+      .section_hidden {
+        transition: none;
+      }
+    }
+  </style>
 
-		const blobObserver = new IntersectionObserver((entries)=>{
-			entries.forEach((entry)=>{
-				console.log(entry)
-				if(entry.isIntersecting){
-					entry.target.classList.add("blob_enlarged")
-				}else{
-					entry.target.classList.remove("blob_enlarged")
-				}
-			})
-		})
+  <script>
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("section_show");
+        } else {
+          entry.target.classList.remove("section_show");
+        }
+      });
+    });
 
+    const blobObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("blob_enlarged");
+        } else {
+          entry.target.classList.remove("blob_enlarged");
+        }
+      });
+    });
 
-		const hiddenElements = document.querySelectorAll(".section_hidden")
-		const blob = document.querySelectorAll(".blob")
+    const hiddenElements = document.querySelectorAll(".section_hidden");
+    const blob = document.querySelectorAll(".blob");
 
-		hiddenElements.forEach((el)=>sectionObserver.observe(el))
-		blob.forEach((el)=>blobObserver.observe(el))
-	</script>
+    hiddenElements.forEach((el) => sectionObserver.observe(el));
+    blob.forEach((el) => blobObserver.observe(el));
+  </script>
 </Layout>
-

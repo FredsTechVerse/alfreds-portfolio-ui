@@ -1,27 +1,88 @@
 ---
 import WorkCard from "../components/WorkCard.astro";
-import SectionHeading from "../components/SectionHeading.astro"
-import ChurchApp from "../assets/Church_App.png"
-import ElimuHub from "../assets/Elimu_Mkononi.png"
-import FrancisPortfolio from "../assets/Francis_Portfolio.png"
+import SectionHeading from "../components/SectionHeading.astro";
+import ChurchApp from "../assets/Church_App.png";
+import ElimuHub from "../assets/Elimu_Mkononi.png";
+import FrancisPortfolio from "../assets/Francis_Portfolio.png";
+import BusinessPortfolioClient from "../assets/Business_Portfolio_Client.png";
+import BusinessPortfolioBanner from "../assets/Business_Portfolio_Banner.png";
+import PersonalPortfolioClient from "../assets/Personal_Portfolio_Client.png";
+import PersonalPortfolioBanner from "../assets/Personal_Portfolio_Banner.png";
 ---
 
-<article id="projects" class=" relative w-full py-16  ">
-    <SectionHeading subTitle="projects" title="featured work"/>
- <section class="grid phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-5 p-4 place-items-center px-5 tablet:px-10 laptop:px-15">
-        <WorkCard status="version 1.0" link="https://elimu-mkononi.netlify.app/" image ={ElimuHub} name="Elimu Hub" description="An e-learning platform with analytics and custom authentication"/>
-        <WorkCard status="under construction" link="https://aipca-app.vercel.app/" image={ChurchApp} name="AIPCA Nyahururu" description="A church application meant to simplify communication and automate record keeping"/>
-        <WorkCard status="version 1.0" link="https://francisgitau.vercel.app/" image={FrancisPortfolio} name="Portfolio" description="A portfolio website for skills display"/>
-    </section>
- <div class="custom-shape-divider-bottom-1694798741">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+<article id="projects" class="relative w-full py-16">
+  <SectionHeading subTitle="projects" title="featured work" />
+  <section
+    class="grid phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-5 p-4 place-items-center px-5 tablet:px-10 laptop:px-15"
+  >
+    <WorkCard
+      status="version 1.0"
+      link="https://diycustomskenya.vercel.app/"
+      tags={["nextJS", "mongodb ", "tailwindcss"]}
+      image={BusinessPortfolioClient}
+      name="DIY Customs Portfolio"
+      description="A business portfolio for showcasing woodwork designs "
+    />
+    <WorkCard
+      status="version 1.0"
+      demo="https://www.linkedin.com/posts/alfred-gichia_finally-got-to-release-a-business-content-activity-7173183978399625217-8JeH?utm_source=share&utm_medium=member_android"
+      link="https://portfolio-cms-vert.vercel.app/"
+      tags={["nextJS", "mongodb ", "tailwindcss"]}
+      image={BusinessPortfolioBanner}
+      name="DIY Customs CMS"
+      description="A business portfolio CMS that provides an intutitive interface for updating content "
+    />
+    <WorkCard
+      status="version 1.0"
+      link="https://joankabura.vercel.app/"
+      tags={["nextJS", "mongodb ", "tailwindcss"]}
+      image={PersonalPortfolioClient}
+      name="Personal Portfolio"
+      description="A portfolio website for showcasing best works linked to the portfolio CMS"
+    />
+    <WorkCard
+      status="version 1.0"
+      link="https://portfolio-cms-vert.vercel.app/"
+      demo="https://www.linkedin.com/posts/alfred-gichia_thrilled-to-release-a-personal-portfolio-activity-7173183399480815616-j8-2?utm_source=share&utm_medium=member_android"
+      tags={["nextJS", "mongodb ", "tailwindcss"]}
+      image={PersonalPortfolioBanner}
+      name="Personal Portfolio CMS"
+      description="A Content Management System for personal portfolios"
+    />
+    <WorkCard
+      status="version 1.0"
+      link="https://elimu-mkononi.netlify.app/"
+      demo="https://www.linkedin.com/posts/alfred-gichia_i-am-excited-to-release-elimu-hub-an-elearning-activity-7107675604287668224-9auo?utm_source=share&utm_medium=member_android"
+      image={ElimuHub}
+      name="Elimu Hub"
+      description="An e-learning platform with analytics and custom authentication"
+      tags={["react", "mongodb ", "tailwindcss"]}
+    />
+    <WorkCard
+      status="version 1.0"
+      link="https://aipca-app.vercel.app/"
+      tags={["react", "mongodb ", "tailwindcss"]}
+      image={ChurchApp}
+      name="AIPCA Nyahururu"
+      description="A church application meant to simplify communication and automate record keeping"
+    />
+  </section>
+  <div class="custom-shape-divider-bottom-1694798741">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"></path>
     </svg>
-</div>
+  </div>
 </article>
 
 <style>
-    .custom-shape-divider-bottom-1694798741 {
+  .custom-shape-divider-bottom-1694798741 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -29,16 +90,16 @@ import FrancisPortfolio from "../assets/Francis_Portfolio.png"
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-}
+  }
 
-.custom-shape-divider-bottom-1694798741 svg {
+  .custom-shape-divider-bottom-1694798741 svg {
     position: relative;
     display: block;
     width: calc(119% + 1.3px);
     height: 55px;
-}
+  }
 
-.custom-shape-divider-bottom-1694798741 .shape-fill {
-    fill: #F1F5F9;
-}
+  .custom-shape-divider-bottom-1694798741 .shape-fill {
+    fill: #f1f5f9;
+  }
 </style>
