@@ -3,7 +3,7 @@ import 'node:http';
 import { TLSSocket } from 'node:tls';
 import { d as appendForwardSlash, j as joinPaths, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, e as collapseDuplicateSlashes } from './chunks/astro/assets-service_a011f3d6.mjs';
 import 'cookie';
-import { l as levels, d as dateTimeFormat, A as AstroCookies, c as computePreferredLocale, a as computePreferredLocaleList, b as computeCurrentLocale, r as routeIsRedirect, e as redirectRouteStatus, f as redirectRouteGenerate, g as routeIsFallback, h as attachCookiesToResponse, i as createAPIContext, j as callEndpoint, k as callMiddleware, L as Logger, m as AstroIntegrationLogger, R as RouteCache, n as getSetCookiesFromResponse, o as createRenderContext, manifest } from './manifest_38728cb6.mjs';
+import { l as levels, d as dateTimeFormat, A as AstroCookies, c as computePreferredLocale, a as computePreferredLocaleList, b as computeCurrentLocale, r as routeIsRedirect, e as redirectRouteStatus, f as redirectRouteGenerate, g as routeIsFallback, h as attachCookiesToResponse, i as createAPIContext, j as callEndpoint, k as callMiddleware, L as Logger, m as AstroIntegrationLogger, R as RouteCache, n as getSetCookiesFromResponse, o as createRenderContext, manifest } from './manifest_8e4dc9b0.mjs';
 import { yellow, dim, bold, cyan, red, reset } from 'kleur/colors';
 import { A as AstroError, R as ReservedSlotName, l as renderSlotToString, n as renderJSX, o as chunkToString, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, p as ResponseSentError, q as CantRenderPage, t as renderPage$1 } from './chunks/astro_51f604e9.mjs';
 import 'html-escaper';
@@ -1103,12 +1103,12 @@ const createExports = (manifest, { middlewareSecret }) => {
 };
 
 const _page0  = () => import('./chunks/generic_300df45f.mjs');
-const _page1  = () => import('./chunks/index_60350624.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1]]);
+const _page1  = () => import('./chunks/index_c9bfb19e.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1]]);
 const _manifest = Object.assign(manifest, {
 	pageMap,
 	renderers,
 });
-const _args = {"middlewareSecret":"7c292be0-c3c6-491f-944c-63ba01789663"};
+const _args = {"middlewareSecret":"2c5b5e2f-eefe-4688-a322-735f0f64384a"};
 
 const _exports = createExports(_manifest, _args);
 const _default = _exports['default'];
