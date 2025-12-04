@@ -1,32 +1,75 @@
 ---
-import { Image } from 'astro:assets';
-import banner from '../assets/banner_1.png'
-import blob from '../assets/blob.svg'
-import resume from "../assets/resume.pdf"
+import { Image } from "astro:assets";
+import banner from "../assets/banner_1.png";
+import blob from "../assets/blob.svg";
+import resume from "../assets/resume.pdf";
 ---
-<article id="home" class="relative w-full laptop:h-[80vh] flex flex-col items-center justify-start laptop:justify-center laptop:flex-row pt-12 laptop:pt-12">
-    <figcaption class="section_hidden relative w-full laptop:w-[50%] flex flex-col items-center laptop:items-start justify-center py-12 pl-5 text-center ">
-        <h2 class="text-2xl tablet:text-4xl uppercase font-bold ">I'm <span class="text-orange-600">Alfred Gichia </span></h2> 
-        <p class="text-md tablet:text-lg text-center laptop:text-start pt-3 pb-10 ">A proficient <span class="">web developer</span> with a keen interest in building stunning, user-centric and lightning-fast web applications using cutting-edge technologies like Astro and Next.js.</p>
-       
-        <a href={resume} download="Alfred_Gichia_Resume" class="bg-orange-600 hover:bg-orange-500 h-12 rounded-lg px-4  text-white w-[80%] tablet:w-56 flex flex-row items-center justify-center mx-auto laptop:mx-0">View Resume</a>
-    </figcaption>
-    <figure class=" h-[400px] tablet:min-h-[600px] tablet:h-max  laptop:h-full w-full laptop:w-[50%] relative  flex flex-row items-end justify-center ">
-        <Image class="absolute phone:bottom-0  laptop:left-12 aspect-square w-full tablet:w-[70%] laptop:w-[78%]" src={banner} alt="Banner Image "/>
-        <Image class="absolute phone:bottom-0 h-[95%] tablet:h-[80%] laptop:h-[88%] bottom-0 w-full z-[-2] blob" src={blob} alt="Banner Image "/>
-    </figure>
 
-   <div class="custom-shape-divider-bottom-1694798206">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+<article
+  id="home"
+  class="relative w-full laptop:h-[80vh] flex flex-col items-center justify-start laptop:justify-center laptop:flex-row pt-12 laptop:pt-12"
+>
+  <figcaption
+    class="section_hidden relative w-full laptop:w-[50%] flex flex-col items-center laptop:items-start justify-center py-12 pl-5 text-center"
+  >
+    <h2 class="text-2xl tablet:text-4xl uppercase font-bold">
+      I'm <span class="text-orange-600">Alfred Gichia </span>
+    </h2>
+    <p class="text-md tablet:text-lg text-center laptop:text-start pt-3 pb-10">
+      A Techpreneur and innovative web application developer with a strong
+      foundation in modern software practices, capable of rapidly adapting to
+      new technologies to build solutions that solve real business problems.
+      Passionate about leveraging technology—and increasingly AI—to automate
+      repetitive tasks, enhance efficiency, and drive meaningful digital
+      transformation.
+    </p>
+
+    <a
+      href={resume}
+      download="Alfred_Gichia_Resume"
+      class="bg-orange-600 hover:bg-orange-500 h-12 rounded-lg px-4 text-white w-[80%] tablet:w-56 flex flex-row items-center justify-center mx-auto laptop:mx-0"
+      >View Resume</a
+    >
+  </figcaption>
+  <figure
+    class="h-[400px] tablet:min-h-[600px] tablet:h-max laptop:h-full w-full laptop:w-[50%] relative flex flex-row items-end justify-center"
+  >
+    <Image
+      class="absolute phone:bottom-0 laptop:left-12 aspect-square w-full tablet:w-[70%] laptop:w-[78%]"
+      src={banner}
+      alt="Banner Image "
+    />
+    <Image
+      class="absolute phone:bottom-0 h-[95%] tablet:h-[80%] laptop:h-[88%] bottom-0 w-full z-[-2] blob"
+      src={blob}
+      alt="Banner Image "
+    />
+  </figure>
+
+  <div class="custom-shape-divider-bottom-1694798206">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+        opacity=".25"
+        class="shape-fill"></path>
+      <path
+        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+        opacity=".5"
+        class="shape-fill"></path>
+      <path
+        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+        class="shape-fill"></path>
     </svg>
-</div>
+  </div>
 </article>
 
 <style>
-.custom-shape-divider-bottom-1694798206 {
+  .custom-shape-divider-bottom-1694798206 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -35,16 +78,16 @@ import resume from "../assets/resume.pdf"
     line-height: 0;
     transform: rotate(180deg);
     z-index: 10;
-}
+  }
 
-.custom-shape-divider-bottom-1694798206 svg {
+  .custom-shape-divider-bottom-1694798206 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 50px;
-}
+  }
 
-.custom-shape-divider-bottom-1694798206 .shape-fill {
-    fill: rgb(241, 245, 249);;
-}
+  .custom-shape-divider-bottom-1694798206 .shape-fill {
+    fill: rgb(241, 245, 249);
+  }
 </style>
