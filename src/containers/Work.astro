@@ -1,70 +1,42 @@
 ---
 import WorkCard from "../components/WorkCard.astro";
 import SectionHeading from "../components/SectionHeading.astro";
-import ChurchApp from "../assets/Church_App.png";
-import ElimuHub from "../assets/Elimu_Mkononi.png";
-import FrancisPortfolio from "../assets/Francis_Portfolio.png";
+import RentalManagementSystem from "../assets/Rental_Management_System.png";
 import BusinessPortfolioClient from "../assets/Business_Portfolio_Client.png";
-import BusinessPortfolioBanner from "../assets/Business_Portfolio_Banner.png";
 import PersonalPortfolioClient from "../assets/Personal_Portfolio_Client.png";
-import PersonalPortfolioBanner from "../assets/Personal_Portfolio_Banner.png";
 ---
 
-<article id="projects" class="relative w-full py-16">
+<article id="projects" class="relative w-full py-16 bg-slate-100">
   <SectionHeading subTitle="projects" title="featured work" />
   <section
     class="grid phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-5 p-4 place-items-center px-5 tablet:px-10 laptop:px-15"
   >
     <WorkCard
-      status="version 1.0"
-      link="https://diycustomskenya.vercel.app/"
+      status="version 3.0"
+      demo="https://www.youtube.com/watch?v=48TyOVP1UFY"
+      link="https://hakikishamalipo.com/"
       tags={["nextJS", "mongodb ", "tailwindcss"]}
-      image={BusinessPortfolioClient}
-      name="DIY Customs Portfolio"
-      description="A business portfolio for showcasing woodwork designs "
+      image={RentalManagementSystem}
+      name="Hakikisha Malipo"
+      description="A property management solution meant to streamline the internal operations of rentals eg hostels & apartments."
     />
     <WorkCard
       status="version 1.0"
       demo="https://www.linkedin.com/posts/alfred-gichia_finally-got-to-release-a-business-content-activity-7173183978399625217-8JeH?utm_source=share&utm_medium=member_android"
-      link="https://portfolio-cms-vert.vercel.app/"
+      link="https://diycustomskenya.vercel.app/"
       tags={["nextJS", "mongodb ", "tailwindcss"]}
-      image={BusinessPortfolioBanner}
-      name="DIY Customs CMS"
-      description="A business portfolio CMS that provides an intutitive interface for updating content "
+      image={BusinessPortfolioClient}
+      name="DIY Customs"
+      description="A carpenter's portfolio used to showcase best  woodworks and linked to a content management system for easier customization as illustrated in demo "
     />
     <WorkCard
       status="version 1.0"
-      link="https://joankabura.vercel.app/"
-      tags={["nextJS", "mongodb ", "tailwindcss"]}
-      image={PersonalPortfolioClient}
-      name="Personal Portfolio"
-      description="A portfolio website for showcasing best works linked to the portfolio CMS"
-    />
-    <WorkCard
-      status="version 1.0"
-      link="https://portfolio-cms-vert.vercel.app/"
+      link="https://austinkaburia.vercel.app/"
       demo="https://www.linkedin.com/posts/alfred-gichia_thrilled-to-release-a-personal-portfolio-activity-7173183399480815616-j8-2?utm_source=share&utm_medium=member_android"
       tags={["nextJS", "mongodb ", "tailwindcss"]}
-      image={PersonalPortfolioBanner}
-      name="Personal Portfolio CMS"
-      description="A Content Management System for personal portfolios"
-    />
-    <WorkCard
-      status="version 1.0"
-      link="https://elimu-mkononi.netlify.app/"
-      demo="https://www.linkedin.com/posts/alfred-gichia_i-am-excited-to-release-elimu-hub-an-elearning-activity-7107675604287668224-9auo?utm_source=share&utm_medium=member_android"
-      image={ElimuHub}
-      name="Elimu Hub"
-      description="An e-learning platform with analytics and custom authentication"
-      tags={["react", "mongodb ", "tailwindcss"]}
-    />
-    <WorkCard
-      status="version 1.0"
-      link="https://aipca-nyahururu.vercel.app/"
-      tags={["react", "mongodb ", "tailwindcss"]}
-      image={ChurchApp}
-      name="AIPCA Nyahururu"
-      description="A church application built to simplify communication and automate record keeping"
+      image={PersonalPortfolioClient}
+      name="Personal Portfolios"
+      description="Utilized to showcase best works and which can be customized from a custom CMS as illustrated in demo"
     />
   </section>
   <div class="custom-shape-divider-bottom-1694798741">
